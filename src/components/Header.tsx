@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,9 +11,17 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <Link 
+            to="/" 
+            className="flex-shrink-0 flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
+          >
+            <img 
+              src="/lovable-uploads/df5ab53d-9f40-4457-b9d1-69d968511735.png" 
+              alt="Volari Logo" 
+              className="h-8 w-8"
+            />
             <h1 className="text-2xl font-bold text-primary">Volari</h1>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
