@@ -14,9 +14,13 @@ const Header = () => {
           <Link 
             to="/" 
             className="flex-shrink-0 flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              window.history.pushState(null, '', '/');
+            }}
           >
             <img 
-              src="/lovable-uploads/df5ab53d-9f40-4457-b9d1-69d968511735.png" 
+              src="/lovable-uploads/c98c806a-d030-4903-9174-9c45bc2f167b.png" 
               alt="Volari Logo" 
               className="h-8 w-8"
             />
