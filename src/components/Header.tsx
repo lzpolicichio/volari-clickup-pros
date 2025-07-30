@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
-import volariLogo from "@/assets/volari-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,13 +11,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="block">
-              <img 
-                src={volariLogo} 
-                alt="Volari - Company Logo" 
-                className="h-8 w-auto hover:opacity-80 transition-opacity"
-              />
-            </Link>
+            <h1 className="text-2xl font-bold text-primary">Volari</h1>
           </div>
 
           {/* Desktop Navigation */}
