@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import volariLogo from "@/assets/volari-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +13,18 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">Volari</h1>
+            <Link 
+              to="/" 
+              className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              <img 
+                src={volariLogo} 
+                alt="Volari" 
+                className="h-8 w-auto"
+              />
+              <h1 className="text-2xl font-bold text-primary">Volari</h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
